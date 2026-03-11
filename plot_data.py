@@ -16,7 +16,8 @@ def plot_gaussian_dataset(data1, data2, title, color="blue"):
     y = np.append(y1, y2)
     
     fig, ax = plt.subplots(figsize=(8, 8))
-    ax.scatter(x, y, color=color, s=1, alpha=0.05)
+    ax.scatter(x1, y1, color="red", s=1, alpha=0.05)
+    ax.scatter(x2, y2, color=color, s=1, alpha=0.05)
     ax.set_aspect('equal')
     
     # # ax.axline(boundary_x, boundary_y, color="red")

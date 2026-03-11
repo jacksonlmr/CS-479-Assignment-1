@@ -26,26 +26,26 @@ for x in combined_set:
     elif (result == 2):
         classifications[tuple(x)] = result
 
-# model said 1, actual 2
-missclassified_s1 = 0
-# model said 2, actual 1
-missclassified_s2 = 0
+# # model said 1, actual 2
+# missclassified_s1 = 0
+# # model said 2, actual 1
+# missclassified_s2 = 0
 
-for key, value in classifications.items():
-    # model said 1, actual 2
-    if (key in set2 and value == 1):
-        missclassified_s1 += 1
+# for key, value in classifications.items():
+#     # model said 1, actual 2
+#     if (key in set2 and value == 1):
+#         missclassified_s1 += 1
 
-    if (key in set1 and value == 2):
-        missclassified_s2 += 1
+#     if (key in set1 and value == 2):
+#         missclassified_s2 += 1
 
-s1_miss_rate = missclassified_s1/len(set1)
-s2_miss_rate = missclassified_s2/len(set2)
-total_miss_rate = (missclassified_s1 + missclassified_s2)/len(combined_set)
+# s1_miss_rate = missclassified_s1/len(set1)
+# s2_miss_rate = missclassified_s2/len(set2)
+# total_miss_rate = (missclassified_s1 + missclassified_s2)/len(combined_set)
 
-print(s1_miss_rate)
-print(s2_miss_rate)
-print(total_miss_rate)
+# print(s1_miss_rate)
+# print(s2_miss_rate)
+# print(total_miss_rate)
 
 plot_gaussian_dataset(set1, set2, "Decision Boundary")
 
